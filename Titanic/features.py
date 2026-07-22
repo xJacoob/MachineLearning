@@ -11,3 +11,6 @@ def name_feature(df):
 def group_rare_title(df):
     rare_titles = ['Dr', 'Rev', 'Major', 'Mlle', 'Col', 'Don', 'Mme', 'Ms', 'Lady', 'Sir', 'Capt', 'the Countess', 'Jonkheer']
     df['Title'] = df['Title'].replace(rare_titles, 'Rare')
+
+def has_cabin_features(df):
+    df['HasCabin'] = df['Cabin'].notna().astype(int)
