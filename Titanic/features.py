@@ -14,3 +14,6 @@ def group_rare_title(df):
 
 def has_cabin_features(df):
     df['HasCabin'] = df['Cabin'].notna().astype(int)
+
+def fare_per_person_features(df):
+    df['FarePerPerson'] = df['Fare'] / df['FamilySize']
