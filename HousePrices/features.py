@@ -78,3 +78,13 @@ def mas_vnr_area(df):
 def electrical(df):
     df['Electrical'] = df['Electrical'].fillna(df['Electrical'].mode()[0])
     return df
+
+def delete_outliers(df):
+    df = df.drop([523, 1298])
+    return df
+
+def clip_rare_values(df):
+    df['GarageCars'] = df['GarageCars'].clip(upper=3)
+    df['Fireplaces'] = df['Fireplaces'].clip(upper=2)
+    df['TotRmsAbvGrd'] = df['TotRmsAbvGrd'].clip(lower=3, upper=11)
+    return df
