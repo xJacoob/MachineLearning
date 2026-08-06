@@ -3,52 +3,72 @@ import matplotlib.pyplot as plt
 
 # Random data
 gen = np.random.default_rng(seed=42)
-X = gen.uniform(0, 10, 1000)
+X0 = gen.uniform(0, 10, 1000)
+X1 = gen.uniform(0, 5, 1000)
 noise = gen.normal(0, 1, 1000)
-y = 3 * X + 5 + noise
+y = 3 * X1 + 2 * X0 + 5 + noise
 
 # Chart
-plt.figure(figsize=(12, 8))
-plt.scatter(X, y, color="blue", label="Training data")
-plt.xlabel("X")
-plt.ylabel("y")
-plt.grid(True, linestyle="--", alpha=0.5)
-plt.legend()
+fig = plt.figure(figsize=(12, 8))
+ax = fig.add_subplot(111, projection="3d")
+scatter = ax.scatter(X0, X1, c=y, cmap="viridis", alpha=0.7)
+ax.set_xlabel("X0")
+ax.set_ylabel("X1")
+ax.set_zlabel("y")
+fig.colorbar(scatter, ax=ax, label="Wartość y", shrink=0.5)
+plt.title("3D Chart: y with respect to X0 and X1")
 plt.show()
 
 # Initialization of the parameters of the linear equation
-w = 0.0
+w0 = 0.0
+w1 = 0.0
 b = 0.0
 
+# Batch size and permutation
+batch = 32
+
 loss_history = []
-for epoch in range(10000):
+for epoch in range(300):
+    idxs = gen.permutation(len(X0))
+    X0_shuffled = X0[idxs]
+    X1_shuffled = X1[idxs]
+    y_shuffled = y[idxs]
+    for i in range(0, len(X0), batch):
+        X0_batch = X0_shuffled[i : i + batch]
+        X1_batch = X1_shuffled[i : i + batch]
+        y_batch = y_shuffled[i : i + batch]
+
     # Prediction
-    y_pred = w * X + b
+        y_pred = w1 * X1_batch + w0 * X0_batch + b
 
     # Loss function
-    loss = np.sum((y - y_pred) ** 2) / len(X)
-    loss_history.append(loss)
+        loss = np.sum((y_batch - y_pred) ** 2) / len(X0_batch)
+        loss_history.append(loss)
 
     # Learning rate, derivative of loss w.r.t. (with respect to) w and derivative of loss w.r.t. b
-    lr = 0.001
-    dw = -(2/len(X)) * np.sum(X * (y - y_pred))
-    db = -(2/len(X)) * np.sum(y - y_pred)
+        lr = 0.001
+        dw0 = -(2/len(X0_batch)) * np.sum(X0_batch * (y_batch - y_pred))
+        dw1 = -(2/len(X0_batch)) * np.sum(X1_batch * (y_batch - y_pred))
+        db = -(2/len(X0_batch)) * np.sum(y_batch - y_pred)
 
     # Update parameters of slope - w and bias - b
-    w = w - lr * dw
-    b = b - lr * db
+        w0 = w0 - lr * dw0
+        w1 = w1 - lr * dw1
+        b = b - lr * db
 
 plt.figure(figsize=(8, 5))
-plt.plot(loss_history, color="red", label="Training loss")
+plt.plot(loss_history[-500:], color="red", label="Training loss")
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.grid(True, linestyle="--", alpha=0.5)
 plt.legend()
 plt.show()
-print(f"w = {w}, b = {b}")
+print(f"w1 = {w1}, w0 = {w0}, b = {b}")
 
 '''
-## Experiment: learning rate too small vs too large
+--- Part 1: single feature ---
+
+Experiment: learning rate too small vs too large
 
 - lr=0.1: loss diverges immediately — grows exponentially every epoch (472 → 15,652 
   → 25 quadrillion+ within 10 epochs) instead of decreasing. On a linear-scale plot, 
@@ -82,3 +102,30 @@ much larger, safer learning rate and faster convergence for all parameters at
 once.
 '''
 
+'''
+--- Part 2: two feature with mini-batches ---
+## Experiment: full-batch vs mini-batch gradient descent
+
+- Observation: full-batch gradient descent (one gradient computed over all 1000 
+  points per update) produces a smooth, monotonically decreasing loss curve — 
+  each step reliably moves toward the minimum. Mini-batch gradient descent 
+  (32 points per update, ~31 updates per epoch) produces a noisy, jagged curve — 
+  after convergence, loss oscillates roughly between 0.5 and 2.0 instead of 
+  settling smoothly near the noise floor (~1.0).
+- Interpretation: full-batch computes the exact average gradient over the entire 
+  dataset, so every update points in a well-defined, consistent direction. 
+  Mini-batch computes the gradient on a small, randomly shuffled subset each 
+  time — this is only a noisy approximation of the true gradient, since different 
+  batches contain different points (some batches may over-represent points the 
+  model currently fits poorly, others may be easier). Each individual update can 
+  therefore overshoot, undershoot, or move slightly off-direction relative to the 
+  true minimum, which shows up as the jagged curve.
+- Consequence: mini-batch trades per-step precision for speed and update 
+  frequency — it makes ~31 parameter updates per epoch instead of 1, using far 
+  less memory per step, which matters enormously once datasets become too large 
+  to fit in memory or compute a full gradient over efficiently (the case for most 
+  real neural network training). The added noise isn't purely a downside either — 
+  it's the same mechanism mentioned earlier when discussing local minima: a noisy 
+  gradient occasionally pushes the parameters out of shallow local dips that a 
+  perfectly smooth, deterministic gradient descent could get stuck in.
+'''
