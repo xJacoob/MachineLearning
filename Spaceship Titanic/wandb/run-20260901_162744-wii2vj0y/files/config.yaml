@@ -1,0 +1,76 @@
+_wandb:
+    value:
+        cli_version: 0.28.2
+        e:
+            syfw06sha7paitlkivtk60ktip2ljubd:
+                args:
+                    - -f
+                    - C:\Users\kubak\AppData\Local\Temp\kernel-c9a6c356-583d-42dd-aad4-a56e9b6cffd811149190602302234271\connection.json
+                    - --IPCompleter.use_jedi=False
+                    - --IPKernelApp.log_level=INFO
+                cpu_count: 6
+                cpu_count_logical: 12
+                cudaVersion: "13.3"
+                disk:
+                    /:
+                        total: "999157555200"
+                        used: "415494795264"
+                email: kuba.kosowicz11@gmail.com
+                executable: C:\Users\kubak\Documents\Programming\PycharmProjects\MachineLearning\.venv\Scripts\python.exe
+                git:
+                    commit: 455cff08ff61ae2667bf6d0d0a8125dbd07159f6
+                    remote: https://github.com/xJacoob/MachineLearning
+                gpu: NVIDIA GeForce RTX 4060 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 4352
+                      memoryTotal: "8585740288"
+                      name: NVIDIA GeForce RTX 4060 Ti
+                      uuid: GPU-0e2fdd6f-e1e3-cd09-8962-8e2f3409438b
+                host: DESKTOP-3864APA
+                memory:
+                    total: "34282192896"
+                os: Windows-11-10.0.26200-SP0
+                program: <python with no main file>
+                python: CPython 3.14.0
+                root: C:\Users\kubak\Documents\Programming\PycharmProjects\MachineLearning\Spaceship Titanic
+                startedAt: "2026-09-01T14:27:44.124402Z"
+                writerId: syfw06sha7paitlkivtk60ktip2ljubd
+        m: []
+        python_version: 3.14.0
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.14.0
+            "5": 0.28.2
+            "8":
+                - 3
+                - 13
+            "12": 0.28.2
+            "13": windows-amd64
+activation:
+    value: ReLU
+batch_size:
+    value: 64
+epochs:
+    value: 20
+hidden_sizes:
+    value:
+        - 64
+        - 64
+        - 64
+lr:
+    value: 0.01
+optimizer:
+    value: SGD

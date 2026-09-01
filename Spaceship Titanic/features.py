@@ -37,6 +37,7 @@ def vip(df):
 
 def passenger(df):
     df['Group'] = df['PassengerId'].str[:4].astype(int)
+    df['GroupSize'] = df.groupby('Group')['Group'].transform('size')
     return df
 
 

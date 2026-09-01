@@ -1,0 +1,44 @@
+{
+  "os":  "Windows-11-10.0.26200-SP0",
+  "python":  "CPython 3.14.0",
+  "startedAt":  "2026-09-01T14:28:30.804985Z",
+  "args":  [
+    "-f",
+    "C:\\Users\\kubak\\AppData\\Local\\Temp\\kernel-c9a6c356-583d-42dd-aad4-a56e9b6cffd811149190602302234271\\connection.json",
+    "--IPCompleter.use_jedi=False",
+    "--IPKernelApp.log_level=INFO"
+  ],
+  "program":  "<python with no main file>",
+  "git":  {
+    "remote":  "https://github.com/xJacoob/MachineLearning",
+    "commit":  "455cff08ff61ae2667bf6d0d0a8125dbd07159f6"
+  },
+  "email":  "kuba.kosowicz11@gmail.com",
+  "root":  "C:\\Users\\kubak\\Documents\\Programming\\PycharmProjects\\MachineLearning\\Spaceship Titanic",
+  "host":  "DESKTOP-3864APA",
+  "executable":  "C:\\Users\\kubak\\Documents\\Programming\\PycharmProjects\\MachineLearning\\.venv\\Scripts\\python.exe",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "gpu":  "NVIDIA GeForce RTX 4060 Ti",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "999157555200",
+      "used":  "415492165632"
+    }
+  },
+  "memory":  {
+    "total":  "34282192896"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4060 Ti",
+      "memoryTotal":  "8585740288",
+      "cudaCores":  4352,
+      "architecture":  "Ada",
+      "uuid":  "GPU-0e2fdd6f-e1e3-cd09-8962-8e2f3409438b"
+    }
+  ],
+  "cudaVersion":  "13.3",
+  "writerId":  "6gm7jl6uoxbw3sa2zrhlins0z4a9l50s"
+}
