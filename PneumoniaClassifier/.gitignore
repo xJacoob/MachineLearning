@@ -2,3 +2,5 @@ chest_xray/
 wandb/
 *.pth
 .idea/
+.gradio/
+Images/

@@ -2,8 +2,9 @@
 
 A transfer-learning image classifier detecting pneumonia from chest X-rays, built on 
 a frozen, ImageNet-pretrained ResNet18. Includes a full experiment log (augmentation, 
-learning rate scheduling, decision threshold), quantitative error analysis, and a 
-standalone CLI tool for running inference on new images.
+learning rate scheduling, decision threshold), quantitative error analysis, and three ways to 
+run inference on new images: a standalone CLI tool, a REST API (FastAPI), 
+and a web demo (Gradio).
 
 ## Dataset
 
@@ -131,6 +132,18 @@ No consistent visual pattern was identified across these images. Unlike the FN g
 this looks more like general model uncertainty on ambiguous images than an 
 identifiable shortcut.
 
+## Setup
+
+```bash
+pip install torch torchvision scikit-learn matplotlib wandb pillow
+```
+
+Download the dataset from Kaggle and place it as `chest_xray/` next to the notebook 
+(`train/`, `test/`, each with `NORMAL/` and `PNEUMONIA/` subfolders). Training and 
+evaluation live in `pneumonia_classifier.ipynb`; it requires a Weights & Biases account 
+(`wandb login`) for experiment logging and saves the trained weights to 
+`model_weights.pth`. The inference scripts below expect that file in the same folder.
+
 ## Inference
 
 ```bash
@@ -142,9 +155,66 @@ training, and prints the predicted class along with the model's confidence (pred
 probability of `PNEUMONIA`) at the same 0.3 decision threshold used throughout this 
 project.
 
+## Demo / API
+
+The trained model can also be used through a REST API and a small web demo. Both reuse 
+the model-loading and prediction code from `app.py`, so there is a single source of 
+truth for preprocessing and the 0.3 decision threshold. Extra dependencies:
+
+```bash
+pip install fastapi uvicorn python-multipart gradio
+```
+
+### API (FastAPI)
+
+Start the server from this directory:
+
+```bash
+uvicorn app:app --reload
+```
+
+Interactive documentation (Swagger UI) is then available at 
+`http://127.0.0.1:8000/docs`, where an image can be uploaded straight from the browser.
+
+**Endpoint:** `POST /predict` — multipart form with the X-ray image in the `file` field.
+
+```bash
+curl -X POST 'http://127.0.0.1:8000/predict' \
+  -F 'file=@path/to/xray.jpeg;type=image/jpeg'
+```
+
+Example response:
+
+```json
+{"label": "NORMAL", "confidence": 0.9974}
+```
+
+**About `confidence`:** in the API (and in the Gradio demo) it is the model's probability 
+for the **returned label**. Because the decision threshold for `PNEUMONIA` is 0.3, that 
+label can be returned with a confidence as low as 0.3. This differs from `predict.py`, 
+which always prints the probability of `PNEUMONIA`.
+
+### Demo (Gradio)
+
+```bash
+python gradio_app.py
+```
+
+Open `http://127.0.0.1:7860`, drop in a chest X-ray and the interface shows the predicted 
+class and the confidence in two separate fields.
+
+![Gradio demo](images/screen.png)
+
 ## Tech stack
 
 - PyTorch, torchvision (`resnet18`, `ImageFolder`)
 - scikit-learn (`train_test_split`, classification metrics, confusion matrix)
 - Weights & Biases (experiment tracking)
 - matplotlib (data/error visualization)
+- FastAPI, Uvicorn (REST API)
+- Gradio (web demo)
+
+## Disclaimer
+
+This is an educational project and not a medical device. It must not be used for 
+clinical decisions.
