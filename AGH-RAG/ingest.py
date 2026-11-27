@@ -78,7 +78,7 @@ def build_index(chunks: list[Chunk], embeddings: np.ndarray) -> chromadb.Collect
 
 if __name__ == "__main__":
     pdfs = load_pdfs(skip_pages=SKIP_PAGES)
-    chunked_pages = chunk_pages(pdfs, 1000, 150)
+    chunked_pages = chunk_pages(pdfs, 1500, 225)
     embed = embed_chunks(chunked_pages)
     coll = build_index(chunked_pages, embed)
 

@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Jakie dni są ustawowo i dodatkowo wolne od zajęć dydaktycznych dla studiów stacjonarnych ?",
+    "expected": "11 listopada 2026, 6 stycznia 2027, 3 maja 2027, 27 maja 2027, 28 maja 2027",
+    "source": "harmonogram.pdf",
+    "page": [2],
+    "type": "easy"
+  },
+  {
+    "question": "Ile razy mogę podjeść do egzaminu ?",
+    "expected": "Student ma prawo do trzykrotnego przystąpienia do egzaminu w zaplanowanych terminach, w tym jeden raz w terminie podstawowym i dwa razy w terminie poprawkowym.",
+    "source": "regulamin.pdf",
+    "page": [19],
+    "type": "easy"
+  },
+  {
+    "question": "Które osiągnięcia naukowe dają 30 punktów lub więcej do zdobycia stypendium ?",
+    "expected": "1.Autorstwo recenzowanej monografii o charakterze naukowym, 2. Autorstwo opublikowanego artykułu naukowego w czasopiśmie z liczbą punktów z zakresu 100-200 (wykaz czasopism naukowych i recenzowanych materiałów z konferencji międzynarodowych zawiera aktualny komunikat ministra właściwego ds. szkolnictwa wyższego i nauki, 3.Nagroda w konferencji o zasięgu międzynarodowym (miejsca I-III), 4.Udział w grancie lub projekcie MNiSW, UE, NCN, NCBiR - międzynarodowym, 5.Udział w grancie lub projekcie MNiSW, UE, NCN, NCBiR - krajowym, 6.Udział w grancie lub projekcie we współpracy z innymi zagranicznymi ośrodkami naukowymi, 7.Nagroda w konkursie/zawodach/wystawie o zasięgu międzynarodowym (miejsca I-III), 8.Nagroda w konkursie/zawodach/wystawie o zasięgu krajowym (miejsca I-III).) ",
+    "source": "stypendia.pdf",
+    "page": [17, 18],
+    "type": "hard"
+  },
+  {
+    "question": "Z jakiego powodu mogę być skreslony z listy studentów ?",
+    "expected": "Obowiązkowo (§ 21 ust. 1): 1) niepodjęcie studiów; 2) rezygnacja ze studiów; 3) niezłożenie pracy dyplomowej lub egzaminu dyplomowego w terminie; 4) ukaranie karą dyscyplinarną wydalenia z Uczelni. Fakultatywnie, dziekan może skreślić (§ 21 ust. 2): 1) brak udziału w obowiązkowych zajęciach bez usprawiedliwionej przyczyny; 2) brak postępów w nauce; 3) nieuzyskanie zaliczenia semestru w terminie określonym w § 17 ust. 6; 4) niewniesienie opłat związanych z odbywaniem studiów.",
+    "source": "regulamin.pdf",
+    "page": [25, 26],
+    "type": "medium"
+  },
+  {
+    "question": "Jak wygląda zaliczenie z przedmiotu o nazwie Przetwarzanie obrazów cyfrowych ?",
+    "expected": "Egzamin, Aktywność na zajęciach, Wykonanie ćwiczeń laboratoryjnych, Kolokwium, Zaliczenie laboratorium",
+    "source": "isi.pdf",
+    "page": [34],
+    "type": "hard"
+  },
+  {
+    "question": "Ile kosztuje miejsce w akademiku AGH ?",
+    "expected": "Nie znalazłem tej informacji w dokumentach",
+    "source": null,
+    "page": [],
+    "type": "out_of_scope"
+  }
+]

@@ -1,0 +1,217 @@
+{
+  "run_name": "c1000_k5_prompt_v2",
+  "k_top": 5,
+  "hits": "5/5",
+  "results": [
+    {
+      "question": "Jakie dni są ustawowo i dodatkowo wolne od zajęć dydaktycznych dla studiów stacjonarnych ?",
+      "type": "easy",
+      "expected": "11 listopada 2026, 6 stycznia 2027, 3 maja 2027, 27 maja 2027, 28 maja 2027",
+      "answer": "Dni ustawowo wolne od zajęć dydaktycznych dla studiów stacjonarnych to: 11 listopada 2026 r., 6 stycznia 2027 r., 3 maja 2027 r., 27 maja 2027 r. Dni dodatkowo wolne od zajęć dydaktycznych to: 28 maja 2027 r. (tylko dla studiów stacjonarnych).\n\n[1] regulamin.pdf, s. 19",
+      "hit": true,
+      "sources": [
+        {
+          "source": "harmonogram.pdf",
+          "page": 2,
+          "distance": 0.2793252468109131
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 16,
+          "distance": 0.3433396816253662
+        },
+        {
+          "source": "harmonogram.pdf",
+          "page": 1,
+          "distance": 0.35707151889801025
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 8,
+          "distance": 0.3710061311721802
+        },
+        {
+          "source": "harmonogram.pdf",
+          "page": 2,
+          "distance": 0.4087657928466797
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Ile razy mogę podjeść do egzaminu ?",
+      "type": "easy",
+      "expected": "Student ma prawo do trzykrotnego przystąpienia do egzaminu w zaplanowanych terminach, w tym jeden raz w terminie podstawowym i dwa razy w terminie poprawkowym.",
+      "answer": "Możesz podjąć do egzaminu trzykrotnie, w tym jeden raz w terminie podstawowym i dwa razy w terminie poprawkowym. [1] regulamin.pdf, s. 19, [2] regulamin.pdf, s. 33",
+      "hit": true,
+      "sources": [
+        {
+          "source": "regulamin.pdf",
+          "page": 19,
+          "distance": 0.38952934741973877
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 33,
+          "distance": 0.4090789556503296
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 19,
+          "distance": 0.4194453954696655
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 33,
+          "distance": 0.4203850030899048
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 20,
+          "distance": 0.426677942276001
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Które osiągnięcia naukowe dają 30 punktów lub więcej do zdobycia stypendium ?",
+      "type": "hard",
+      "expected": "1.Autorstwo recenzowanej monografii o charakterze naukowym, 2. Autorstwo opublikowanego artykułu naukowego w czasopiśmie z liczbą punktów z zakresu 100-200 (wykaz czasopism naukowych i recenzowanych materiałów z konferencji międzynarodowych zawiera aktualny komunikat ministra właściwego ds. szkolnictwa wyższego i nauki, 3.Nagroda w konferencji o zasięgu międzynarodowym (miejsca I-III), 4.Udział w grancie lub projekcie MNiSW, UE, NCN, NCBiR - międzynarodowym, 5.Udział w grancie lub projekcie MNiSW, UE, NCN, NCBiR - krajowym, 6.Udział w grancie lub projekcie we współpracy z innymi zagranicznymi ośrodkami naukowymi, 7.Nagroda w konkursie/zawodach/wystawie o zasięgu międzynarodowym (miejsca I-III), 8.Nagroda w konkursie/zawodach/wystawie o zasięgu krajowym (miejsca I-III).) ",
+      "answer": "Osiągnięcia naukowe dające 30 punktów lub więcej do zdobycia stypendium to:\n\n1. Autorstwo recenzowanej monografii o charakterze naukowym [1] stypendia.pdf, s. 17\n2. Autorstwo 3 rozdziałów recenzowanej monografii o charakterze naukowym [1] stypendia.pdf, s. 17\n3. Autorstwo opublikowanego artykułu naukowego w czasopiśmie z liczbą punktów z zakresu 100-200 [1] stypendia.pdf, s. 17",
+      "hit": true,
+      "sources": [
+        {
+          "source": "stypendia.pdf",
+          "page": 20,
+          "distance": 0.35573917627334595
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 18,
+          "distance": 0.3626680374145508
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 19,
+          "distance": 0.3687741756439209
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 20,
+          "distance": 0.3788355588912964
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 17,
+          "distance": 0.379223108291626
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Z jakiego powodu mogę być skreslony z listy studentów ?",
+      "type": "medium",
+      "expected": "Obowiązkowo (§ 21 ust. 1): 1) niepodjęcie studiów; 2) rezygnacja ze studiów; 3) niezłożenie pracy dyplomowej lub egzaminu dyplomowego w terminie; 4) ukaranie karą dyscyplinarną wydalenia z Uczelni. Fakultatywnie, dziekan może skreślić (§ 21 ust. 2): 1) brak udziału w obowiązkowych zajęciach bez usprawiedliwionej przyczyny; 2) brak postępów w nauce; 3) nieuzyskanie zaliczenia semestru w terminie określonym w § 17 ust. 6; 4) niewniesienie opłat związanych z odbywaniem studiów.",
+      "answer": "Możesz zostać skreślony z listy studentów z powodu:\n\n1. Niepodjęcia studiów [1, 3, 7]\n2. Rezygnacji ze studiów [2, 17]\n3. Niezłożenia pracy dyplomowej lub egzaminu dyplomowego w terminie [1, 3, 4]\n4. Nieuzyskania zaliczenia semestru w terminie określonym w regulaminie [3]\n5. Niewniesienia opłat związanych z odbywaniem studiów [2, 4]\n6. Stwierdzenia braku udziału w obowiązkowych zajęciach bez usprawiedliwionej przyczyny [2, 3]\n7. Stwierdzenia braku postępów w nauce [2, 3]\n8. Niezgłoszenia się do dziekanatu po zakończeniu urlopu od zajęć celem uzyskania stosownego wpisu w systemie USOS w terminie określonym w regulaminie [3]",
+      "hit": true,
+      "sources": [
+        {
+          "source": "regulamin.pdf",
+          "page": 26,
+          "distance": 0.2752799391746521
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 25,
+          "distance": 0.2886497974395752
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 26,
+          "distance": 0.30757153034210205
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 26,
+          "distance": 0.3193625211715698
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 27,
+          "distance": 0.3320140838623047
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Jak wygląda zaliczenie z przedmiotu o nazwie Przetwarzanie obrazów cyfrowych ?",
+      "type": "hard",
+      "expected": "Egzamin, Aktywność na zajęciach, Wykonanie ćwiczeń laboratoryjnych, Kolokwium, Zaliczenie laboratorium",
+      "answer": "[Nie znalazłem tej informacji w dokumentach].",
+      "hit": true,
+      "sources": [
+        {
+          "source": "isi.pdf",
+          "page": 28,
+          "distance": 0.4419376850128174
+        },
+        {
+          "source": "isi.pdf",
+          "page": 34,
+          "distance": 0.44399547576904297
+        },
+        {
+          "source": "isi.pdf",
+          "page": 37,
+          "distance": 0.44565314054489136
+        },
+        {
+          "source": "isi.pdf",
+          "page": 38,
+          "distance": 0.45319586992263794
+        },
+        {
+          "source": "isi.pdf",
+          "page": 28,
+          "distance": 0.4579528570175171
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Ile kosztuje miejsce w akademiku AGH ?",
+      "type": "out_of_scope",
+      "expected": "Nie znalazłem tej informacji w dokumentach",
+      "answer": "[Nie znalazłem tej informacji w dokumentach].",
+      "hit": null,
+      "sources": [
+        {
+          "source": "stypendia.pdf",
+          "page": 1,
+          "distance": 0.44291144609451294
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 22,
+          "distance": 0.4671720862388611
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 21,
+          "distance": 0.4689840078353882
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 28,
+          "distance": 0.47766345739364624
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 22,
+          "distance": 0.4776848554611206
+        }
+      ],
+      "grade": null
+    }
+  ]
+}

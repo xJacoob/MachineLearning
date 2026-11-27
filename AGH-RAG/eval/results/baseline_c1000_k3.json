@@ -1,0 +1,157 @@
+{
+  "run_name": "baseline_c1000_k3",
+  "k_top": 3,
+  "hits": "5/5",
+  "results": [
+    {
+      "question": "Jakie dni są ustawowo i dodatkowo wolne od zajęć dydaktycznych dla studiów stacjonarnych ?",
+      "type": "easy",
+      "expected": "11 listopada 2026, 6 stycznia 2027, 3 maja 2027, 27 maja 2027, 28 maja 2027",
+      "answer": "Dni ustawowo wolne od zajęć dydaktycznych dla studiów stacjonarnych to 11 listopada 2026 r., 6 stycznia 2027 r., 3 maja 2027 r., 27 maja 2027 r. Dni dodatkowo wolne od zajęć dydaktycznych to 28 maja 2027 r. [harmonogram.pdf], Strona: 2.",
+      "hit": true,
+      "sources": [
+        {
+          "source": "harmonogram.pdf",
+          "page": 2,
+          "distance": 0.2793252468109131
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 16,
+          "distance": 0.3433396816253662
+        },
+        {
+          "source": "harmonogram.pdf",
+          "page": 1,
+          "distance": 0.35707151889801025
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Ile razy mogę podjeść do egzaminu ?",
+      "type": "easy",
+      "expected": "Student ma prawo do trzykrotnego przystąpienia do egzaminu w zaplanowanych terminach, w tym jeden raz w terminie podstawowym i dwa razy w terminie poprawkowym.",
+      "answer": "Möglich ist drei Prüfungen, w der Regel eine im Haupttermin und zwei im Wiederholungstermin, zu bestehen. Dokument: [regulamin.pdf], Str. 33.",
+      "hit": true,
+      "sources": [
+        {
+          "source": "regulamin.pdf",
+          "page": 19,
+          "distance": 0.38952934741973877
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 33,
+          "distance": 0.4090789556503296
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 19,
+          "distance": 0.4194453954696655
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Które osiągnięcia naukowe dają 30 punktów lub więcej do zdobycia stypendium ?",
+      "type": "hard",
+      "expected": "1.Autorstwo recenzowanej monografii o charakterze naukowym, 2. Autorstwo opublikowanego artykułu naukowego w czasopiśmie z liczbą punktów z zakresu 100-200 (wykaz czasopism naukowych i recenzowanych materiałów z konferencji międzynarodowych zawiera aktualny komunikat ministra właściwego ds. szkolnictwa wyższego i nauki, 3.Nagroda w konferencji o zasięgu międzynarodowym (miejsca I-III), 4.Udział w grancie lub projekcie MNiSW, UE, NCN, NCBiR - międzynarodowym, 5.Udział w grancie lub projekcie MNiSW, UE, NCN, NCBiR - krajowym, 6.Udział w grancie lub projekcie we współpracy z innymi zagranicznymi ośrodkami naukowymi, 7.Nagroda w konkursie/zawodach/wystawie o zasięgu międzynarodowym (miejsca I-III), 8.Nagroda w konkursie/zawodach/wystawie o zasięgu krajowym (miejsca I-III).) ",
+      "answer": "Osiągnięcia dające 30 punktów lub więcej to udział w grancie MNiSW, UE, międzynarodowym [stypendia.pdf, s. 20] oraz nagroda w konkursie/wystawie o zasięgu międzynarodowym [stypendia.pdf, s. 19].",
+      "hit": true,
+      "sources": [
+        {
+          "source": "stypendia.pdf",
+          "page": 20,
+          "distance": 0.35573917627334595
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 18,
+          "distance": 0.3626680374145508
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 19,
+          "distance": 0.3687741756439209
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Z jakiego powodu mogę być skreslony z listy studentów ?",
+      "type": "medium",
+      "expected": "Obowiązkowo (§ 21 ust. 1): 1) niepodjęcie studiów; 2) rezygnacja ze studiów; 3) niezłożenie pracy dyplomowej lub egzaminu dyplomowego w terminie; 4) ukaranie karą dyscyplinarną wydalenia z Uczelni. Fakultatywnie, dziekan może skreślić (§ 21 ust. 2): 1) brak udziału w obowiązkowych zajęciach bez usprawiedliwionej przyczyny; 2) brak postępów w nauce; 3) nieuzyskanie zaliczenia semestru w terminie określonym w § 17 ust. 6; 4) niewniesienie opłat związanych z odbywaniem studiów.",
+      "answer": "Możesz zostać skreślony z listy studentów z powodu niepodjęcia studiów, rezygnacji ze studiów, niezłożenia pracy dyplomowej lub egzaminu dyplomowego w terminie, ukarania karą dyscyplinarną wydalenia z Uczelni, stwierdzenia braku udziału w obowiązkowych zajęciach bez usprawiedliwionej przyczyny, braku postępów w nauce, nieuzyskania zaliczenia semestru w terminie, czy też niewniesienia opłat związanych z odbywaniem studiów. Dokument: [regulamin.pdf], Strona: [26].",
+      "hit": true,
+      "sources": [
+        {
+          "source": "regulamin.pdf",
+          "page": 26,
+          "distance": 0.2752799391746521
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 25,
+          "distance": 0.2886497974395752
+        },
+        {
+          "source": "regulamin.pdf",
+          "page": 26,
+          "distance": 0.30757153034210205
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Jak wygląda zaliczenie z przedmiotu o nazwie Przetwarzanie obrazów cyforwych ?",
+      "type": "hard",
+      "expected": "Egzamin, Aktywność na zajęciach, Wykonanie ćwiczeń laboratoryjnych, Kolokwium, Zaliczenie laboratorium",
+      "answer": "[Nie znalazłem tej informacji w dokumentach].",
+      "hit": true,
+      "sources": [
+        {
+          "source": "isi.pdf",
+          "page": 28,
+          "distance": 0.46206802129745483
+        },
+        {
+          "source": "isi.pdf",
+          "page": 34,
+          "distance": 0.47399741411209106
+        },
+        {
+          "source": "isi.pdf",
+          "page": 29,
+          "distance": 0.4779045581817627
+        }
+      ],
+      "grade": null
+    },
+    {
+      "question": "Ile kosztuje miejsce w akademiku AGH ?",
+      "type": "out_of_scope",
+      "expected": "Nie znalazłem tej informacji w dokumentach",
+      "answer": "[Nie znalazłem tej informacji w dokumentach].",
+      "hit": null,
+      "sources": [
+        {
+          "source": "stypendia.pdf",
+          "page": 1,
+          "distance": 0.44291144609451294
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 22,
+          "distance": 0.4671720862388611
+        },
+        {
+          "source": "stypendia.pdf",
+          "page": 21,
+          "distance": 0.4689840078353882
+        }
+      ],
+      "grade": null
+    }
+  ]
+}
